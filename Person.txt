@@ -17,8 +17,28 @@ public class Player {
         this.newReward = reward;
     }
 
-    public void design(Theme theme, RoundManager roundManager) {
-        // the designing part
+    public void design() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Design your outfit by choosing items (Enter 'done' when finished):");
+
+        while (true) {
+            System.out.print("Enter the style of the item: ");
+            String style = scanner.nextLine();
+
+            if (style.equalsIgnoreCase("done")) {
+                break;
+            }
+
+            // Find the item with the entered style
+            ClothingItem selectedItem = findItemByStyle(style);
+
+            if (selectedItem != null) {
+                designedOutfit.add(selectedItem);
+                System.out.println("Added " + selectedItem.getStyle() + " to the outfit.");
+            } else {
+                System.out.println("Item not found. Please choose a valid style.");
+            }
+        }
     }
 
     public void buy(ClothingItem item, Store store) {
