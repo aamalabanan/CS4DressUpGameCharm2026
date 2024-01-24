@@ -82,7 +82,7 @@ public class Player {
         System.out.println("Earned Money: " + money + " Pesos");
     }
 
-    public void reward(RoundManager roundManager) {
+    public void getreward(RoundManager roundManager) {
         if (roundManager.getrate() == 5) {
             ClothingItem newReward = roundManager.reward(this);
             if (newReward != null) {
