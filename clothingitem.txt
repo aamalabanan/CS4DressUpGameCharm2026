@@ -1,49 +1,18 @@
-public class ClothingItem {
-    private String type;
+public class ClothingItem{
     private String style;
-    private Theme theme;
+    private String type;
+    private int price;
     private boolean owned;
 
-    public ClothingItem(String type, String style, Theme theme) {
-        this.type = type;
+    public ClothingItem(String style, String type, int price) {
         this.style = style;
-        this.theme = theme;
+        this.type = type;
+        this.price = price;
         this.owned = false;
     }
 
-        public ClothingItem reward(Player player) {
-        if (rate == 5) {
-            ClothingItem rewardItem= getRandomReward();
-            player.receiveReward(newReward);
-            return newReward;
-        }
-        return null;
-    }
-
-    private ClothingItem getRandomReward() {
-        // This could be a predefined list of possible items
-        ClothingItem[] possibleRewards = {
-                new ClothingItem("Pink wings", "Fairy"),
-                new ClothingItem("Brown boots", "Coat"),
-                new ClothingItem("Denim short", "Summer")
-        };
-
-        int randomIndex = new Random().nextInt(possibleRewards.length);
-
-        return possibleRewards[randomIndex];
-    }
-
-
-    public String getType() {
-        return type;
-    }
-
-    public String getStyle() {
-        return style;
-    }
-
-    public Theme getTheme() {
-        return theme;
+    public int getPrice() {
+        return price;
     }
 
     public boolean isOwned() {
@@ -53,4 +22,3 @@ public class ClothingItem {
     public void setOwned(boolean owned) {
         this.owned = owned;
     }
-}
