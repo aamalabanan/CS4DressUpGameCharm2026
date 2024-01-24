@@ -25,7 +25,7 @@ public class DressUpGame {
         self.design();
         self.buy(item1, s);
         self.receiveRate(so, rs);
-        self.earn(5);
+        self.earn(3);
     }
     
 }
