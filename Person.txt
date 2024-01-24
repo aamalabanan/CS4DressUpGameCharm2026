@@ -18,7 +18,7 @@ public class Player {
     }
 
     public void design(Theme theme, RoundManager roundManager) {
-        // Implement the design logic
+        // the designing part
     }
 
     public void buy(ClothingItem item, Store store) {
@@ -31,11 +31,11 @@ public class Player {
     }
 
     public void receiveRate(ScoreOutfit scoreOutfit, RatingSystem ratingSystem) {
-        // Implement the rating logic
+        // get rate from the calculator
     }
 
     public void earn(int stars) {
-        // Implement the earn logic
+        // get earnings
     }
 
     public void reward(RoundManager roundManager) {
