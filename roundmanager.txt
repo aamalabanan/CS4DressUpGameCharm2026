@@ -1,6 +1,6 @@
 public class RoundManager {
     private int numRoundsPlayed;
-    private int rate;
+    private int starRating;
     private ArrayList<ClothingItem> rewardItems;
 
     public RoundManager() {
@@ -10,7 +10,7 @@ public class RoundManager {
     }
 
         public ClothingItem reward(Player player) {
-        if (rate == 5) {
+        if (starRating == 5) {
             ClothingItem rewardItem= getRandomReward();
             player.receiveReward(newReward);
             return newReward;
