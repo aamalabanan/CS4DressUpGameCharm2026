@@ -2,8 +2,17 @@ public class RatingSystem {
     private int starRating;
 
     public int determineStarRating(int score) {
-        // Implement the star rating determination logic based on the score
-        return starRating;
+        if (score >= 81) {
+            return 5;
+        } else if (score >= 61) {
+            return 4;
+        } else if (score >= 41) {
+            return 3;
+        } else if (score >= 21) {
+            return 2;
+        } else {
+            return 1;
+        }
     }
 
     public int getStarRating() {
