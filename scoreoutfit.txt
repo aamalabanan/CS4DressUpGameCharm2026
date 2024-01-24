@@ -8,8 +8,15 @@ public class ScoreOutfit {
     }
 
     public int calculateScore(Theme theme) {
-        // Implement the score calculation logic based on theme and appropriateness of clothes
-        return score;
+        int score = 0;
+        for (ClothingItem item : outfit.getClothes()) {
+            if (theme.matchTheme(item)) {
+                score += 15;
+            } else {
+                score -= 5;
+            }
+        }
+        return Math.max(score, 0);
     }
 
     public ArrayList<ClothingItem> getSelectedClothes() {
