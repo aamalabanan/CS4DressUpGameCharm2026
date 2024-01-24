@@ -21,8 +21,13 @@ public class Player {
         // Implement the design logic
     }
 
-    public void buy(ClothingItem item) {
-        // Implement the buy logic
+    public void buy(ClothingItem item, Store store) {
+        if (!item.isOwned() && money >= item.getPrice()) {
+            money -= item.getPrice();
+            ownedItems.add(item);
+            item.setOwned(true);
+            System.out.println("You bought a new item: " + item.getStyle());
+        }
     }
 
     public void receiveRate(ScoreOutfit scoreOutfit, RatingSystem ratingSystem) {
