@@ -8,8 +8,7 @@ public class Theme {
     }
 
     public boolean matchTheme(ClothingItem item) {
-        // Implement the theme matching logic
-        return false;
+        return this.theme.equalsIgnoreCase(theme);
     }
 
     public String getTag() {
