@@ -31,11 +31,35 @@ public class Player {
     }
 
     public void receiveRate(ScoreOutfit scoreOutfit, RatingSystem ratingSystem) {
-        // get rate from the calculator
+        ScoreOutfit scoreOutfit = new ScoreOutfit(outfit, theme);
+        int score = scoreOutfit.calculateScore();
+        int stars = RatingSystem.determineStarRating(score);
+
+        System.out.println("Outfit Score: " + score);
+        System.out.println("Rating: " + stars + " stars");
+
+        earnMoney(stars);
     }
 
     public void earn(int stars) {
-        // get earnings
+        switch (stars) {
+            case 5:
+                money += 500;
+                break;
+            case 4:
+                money += 400;
+                break;
+            case 3:
+                money += 300;
+                break;
+            case 2:
+                money += 200;
+                break;
+            case 1:
+                money += 100;
+                break;
+        }
+        System.out.println("Earned Money: " + money + " Pesos");
     }
 
     public void reward(RoundManager roundManager) {
