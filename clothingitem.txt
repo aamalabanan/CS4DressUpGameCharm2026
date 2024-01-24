@@ -11,6 +11,29 @@ public class ClothingItem {
         this.owned = false;
     }
 
+        public ClothingItem reward(Player player) {
+        if (rate == 5) {
+            ClothingItem rewardItem= getRandomReward();
+            player.receiveReward(newReward);
+            return newReward;
+        }
+        return null;
+    }
+
+    private ClothingItem getRandomReward() {
+        // This could be a predefined list of possible items
+        ClothingItem[] possibleRewards = {
+                new ClothingItem("Pink wings", "Fairy"),
+                new ClothingItem("Brown boots", "Coat"),
+                new ClothingItem("Denim short", "Summer")
+        };
+
+        int randomIndex = new Random().nextInt(possibleRewards.length);
+
+        return possibleRewards[randomIndex];
+    }
+
+
     public String getType() {
         return type;
     }
