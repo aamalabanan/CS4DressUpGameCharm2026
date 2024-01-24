@@ -1,0 +1,30 @@
+public class ScoreOutfit {
+    private ArrayList<ClothingItem> selectedClothes;
+    private int score;
+
+    public ScoreOutfit() {
+        this.selectedClothes = new ArrayList<>();
+        this.score = 0;
+    }
+
+    public int calculateScore(Theme theme) {
+        // Implement the score calculation logic based on theme and appropriateness of clothes
+        return score;
+    }
+
+    public ArrayList<ClothingItem> getSelectedClothes() {
+        return selectedClothes;
+    }
+
+    public void setSelectedClothes(ArrayList<ClothingItem> selectedClothes) {
+        this.selectedClothes = selectedClothes;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+}

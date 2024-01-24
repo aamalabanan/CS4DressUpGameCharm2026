@@ -1,0 +1,73 @@
+import java.util.ArrayList;
+
+public class Player {
+    private String name;
+    private int money;
+    private ArrayList<ClothingItem> ownedItems;
+    private int currentRound;
+    private int totalRoundsPlayed;
+
+    public Player(String name) {
+        this.name = name;
+        this.money = 1000;
+        this.ownedItems = new ArrayList<>();
+        this.currentRound = 1;
+        this.totalRoundsPlayed = 0;
+    }
+
+    public void design(Theme theme, RoundManager roundManager) {
+        // Implement the design logic
+    }
+
+    public void buy(ClothingItem item) {
+        // Implement the buy logic
+    }
+
+    public void receiveRate(ScoreOutfit scoreOutfit, RatingSystem ratingSystem) {
+        // Implement the rating logic
+    }
+
+    public void earn(int stars) {
+        // Implement the earn logic
+    }
+
+    public void reward(RoundManager roundManager) {
+        // Implement the reward logic
+    }
+
+        public String getName() {
+        return name;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public ArrayList<ClothingItem> getOwnedItems() {
+        return ownedItems;
+    }
+
+    public void setOwnedItems(ArrayList<ClothingItem> ownedItems) {
+        this.ownedItems = ownedItems;
+    }
+
+    public int getCurrentRound() {
+        return currentRound;
+    }
+
+    public void setCurrentRound(int currentRound) {
+        this.currentRound = currentRound;
+    }
+
+    public int getTotalRoundsPlayed() {
+        return totalRoundsPlayed;
+    }
+
+    public void setTotalRoundsPlayed(int totalRoundsPlayed) {
+        this.totalRoundsPlayed = totalRoundsPlayed;
+    }
+}

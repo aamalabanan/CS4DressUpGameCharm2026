@@ -1,0 +1,16 @@
+public class RatingSystem {
+    private int starRating;
+
+    public int determineStarRating(int score) {
+        // Implement the star rating determination logic based on the score
+        return starRating;
+    }
+
+    public int getStarRating() {
+        return starRating;
+    }
+
+    public void setStarRating(int starRating) {
+        this.starRating = starRating;
+    }
+}

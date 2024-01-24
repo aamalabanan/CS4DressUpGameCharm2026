@@ -1,0 +1,30 @@
+public class RoundManager {
+    private int numRoundsPlayed;
+    private ArrayList<ClothingItem> rewardItems;
+
+    public RoundManager() {
+        this.numRoundsPlayed = 0;
+        this.rewardItems = new ArrayList<>();
+        // Initialize reward items
+    }
+
+    public void reward(Player player) {
+        // Implement the reward logic
+    }
+
+    public int getNumRoundsPlayed() {
+        return numRoundsPlayed;
+    }
+
+    public void setNumRoundsPlayed(int numRoundsPlayed) {
+        this.numRoundsPlayed = numRoundsPlayed;
+    }
+
+    public ArrayList<ClothingItem> getRewardItems() {
+        return rewardItems;
+    }
+
+    public void setRewardItems(ArrayList<ClothingItem> rewardItems) {
+        this.rewardItems = rewardItems;
+    }
+}
